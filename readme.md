@@ -1,3 +1,5 @@
+![Logo](https://cdn.discordapp.com/attachments/632238663094370366/633016247210213386/SmallLogo.png)
+
 # Universal Discord Bot
 
 Universal Discord Bot (UDB) is a brand new Discord bot designed to have all the features you could possibly want from a Discord bot!
