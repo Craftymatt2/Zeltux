@@ -10,6 +10,10 @@ We provide 24/7 free lifetime support, for all our paying clients, with proof of
 
 UDB's Github has a detailed Wiki of all the features it includes, with detailed setup and installation guides to help you get your bot up and running. Our team is always on hand to lend a helping hand.
 
+## Development
+
+UDB is created in JavaScript (Discord.js) using Node.js. There are numerous dependencies that need to be installed, but are all explained in the instillation section of our [Wiki](https://github.com/Craftymatt2/UniversalDiscordBot/wiki).
+
 ## Purchase
 You can purchase the bot from **COMING SOON**
 
