@@ -2,9 +2,13 @@
 
 # Universal Discord Bot
 
-Universal Discord Bot (UDB) is a brand new Discord bot designed to have all the features you could possibly want from a Discord bot!
+Universal Discord Bot (UDB) is a brand new multipurpose Discord bot designed to have all the features you could possibly need from a Discord bot and more! The bot is brand new, with dedicated developers to bring quick and frequent updated to the bot's core features.
 
-It's designed to be modular, so you can design your own, or add/purchase extra commands to add to the bot.
+UDB is designed to be modular. This means if the bot already doesn't have a feature you're looking for, UDB's team or a third party might have created a module that you can add to bring that functionality to your bot. You can design your own modules too!
+
+We provide 24/7 free lifetime support, for all our paying clients, with proof of purchase. So if you're ever in need of help, we are always here to help.
+
+UDB's Github has a detailed Wiki of all the features it includes, with detailed setup and installation guides to help you get your bot up and running. Our team is always on hand to lend a helping hand.
 
 ## Purchase
 You can purchase the bot from **COMING SOON**
