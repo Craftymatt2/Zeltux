@@ -9,3 +9,6 @@ You can purchase the bot from **COMING SOON**
 
 ## Features & Info
 There is a large amount of information given in our [Wiki](https://github.com/Craftymatt2/UniversalDiscordBot/wiki) so we massively recommend you check that out to see features, modules and how things work.
+
+## Terms & Conditions
+Check out our [Ts&Cs Wiki Page](https://github.com/Craftymatt2/UniversalDiscordBot/wiki/Terms-and-Conditions) for info about our terms and licencing.
