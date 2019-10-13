@@ -1,4 +1,4 @@
-![Logo](https://cdn.discordapp.com/attachments/632238663094370366/633016247210213386/SmallLogo.png)
+![Logo](https://cdn.discordapp.com/attachments/632238663094370366/633016685028311058/SmallLogo.png)
 
 # Universal Discord Bot
 
