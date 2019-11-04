@@ -15,7 +15,7 @@ UDB's Github has a detailed Wiki of all the features it includes, with detailed 
 UDB is created in JavaScript (Discord.js) using Node.js. There are numerous dependencies that need to be installed but are all explained in the installation section of our [Wiki](https://github.com/Craftymatt2/UniversalDiscordBot/wiki).
 
 ## Purchase
-You can purchase the bot from **COMING SOON**
+You can purchase the bot from [MC-Market](https://www.mc-market.org/resources/12800/).
 
 ## Features & Info
 There is a large amount of information given in our [Wiki](https://github.com/Craftymatt2/UniversalDiscordBot/wiki) so we massively recommend you check that out to see features, modules and how things work.
