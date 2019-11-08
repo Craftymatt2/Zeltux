@@ -1,6 +1,6 @@
 
 const Discord = require("discord.js");
-const config = require("./minecraft.json");
+const config = require("./minecraft_config.json");
 const request = require('request')
 
 // Status
