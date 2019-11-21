@@ -2,7 +2,7 @@
 
 # Zeltux
 
-![Discord](https://img.shields.io/discord/632238662641516546?color=%23ff0062&label=Zeltux%20Discord&logo=https://cdn.discordapp.com/attachments/634835352338563123/647203224096604162/logo.png&logoColor=%23ff0062&style=for-the-badge)
+![Discord](https://img.shields.io/discord/632238662641516546?color=%23ff0062&label=Zeltux%20Discord&logo=discord&logoColor=%23ff0062&style=for-the-badge)
 
 Zeltux is a brand new multipurpose Discord bot designed to have all the features you could possibly need from a Discord bot and more! The bot is brand new, with dedicated developers to bring quick and frequent updated to the bot's core features.
 
