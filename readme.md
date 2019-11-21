@@ -2,6 +2,8 @@
 
 # Zeltux
 
+https://img.shields.io/discord/632238662641516546?color=%23ff0062&label=%20Zeltux%20Discord
+
 Zeltux is a brand new multipurpose Discord bot designed to have all the features you could possibly need from a Discord bot and more! The bot is brand new, with dedicated developers to bring quick and frequent updated to the bot's core features.
 
 Zeltux is designed to be modular. This means if the bot already doesn't have a feature you're looking for, Zeltux's team or a third party might have created a module that you can add to bring that functionality to your bot. You can design your own modules too!
