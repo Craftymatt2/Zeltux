@@ -5,7 +5,7 @@
 // Created By Matt
 // In collaboration with Azono & amaan1028
 
-// For Zeltux Version 1.0.6
+// For Zeltux Version 1.0.8
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -41,66 +41,102 @@ modules.forEach(c => {
       let props = require(`./commands/modules/${f}`)
       if(f.split(".").pop() === "js"){
       console.log(`Loaded ${f}.`);
-      try{
-      if (props.cmd1 && !props.cmd1.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd1 && props.cmd1.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd1.help.name, props.cmd1);
+      
+      try {
+        props.ready(client)
       }
       catch{return}
+
       try{
-      if (props.cmd2 && !props.cmd2.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd2 && props.cmd2.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd2.help.name, props.cmd2);
-      }
-      catch{return}
-      try{
-      if (props.cmd3 && !props.cmd3.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd3 && props.cmd3.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd3.help.name, props.cmd3);
-      }
-      catch{return}
-      try{
-      if (props.cmd4 && !props.cmd4.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd4 && props.cmd4.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd4.help.name, props.cmd4);
-      }
-      catch{return}
-      try{
-      if (props.cmd5 && !props.cmd5.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd5 && props.cmd5.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd5.help.name, props.cmd5);
-      }
-      catch{return}
-      try{
-      if (props.cmd6 && !props.cmd6.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd6 && props.cmd6.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd6.help.name, props.cmd6);
-      }
-      catch{return}
-      try{
-      if (props.cmd7 && !props.cmd7.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd7 && props.cmd7.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd7.help.name, props.cmd7);
-      }
-      catch{return}
-      try{
-      if (props.cmd8 && !props.cmd8.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd8 && props.cmd8.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd8.help.name, props.cmd8);
-      }
-      catch{return}
-      try{
-      if (props.cmd9 && !props.cmd9.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd9 && props.cmd9.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd9.help.name, props.cmd9);
-      }
-      catch{return}
-      try{
-      if (props.cmd10 && !props.cmd10.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      if (!props.cmd10 && props.cmd10.help.name) return console.log('[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact Zeltux support.')
-      client.commands.set(props.cmd10.help.name, props.cmd10);
-      }
-      catch{return}
+        if (props.cmd1 && !props.cmd1.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd1 && props.cmd1.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd1.help.name, props.cmd1);
+        props.cmd1.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd1)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd2 && !props.cmd2.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd2 && props.cmd2.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd2.help.name, props.cmd2);
+        props.cmd2.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd2)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd3 && !props.cmd3.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd3 && props.cmd3.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd3.help.name, props.cmd3);
+        props.cmd3.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd3)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd4 && !props.cmd4.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd4 && props.cmd4.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd4.help.name, props.cmd4);
+        props.cmd4.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd4)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd5 && !props.cmd5.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd5 && props.cmd5.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd5.help.name, props.cmd5);
+        props.cmd5.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd5)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd6 && !props.cmd6.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd6 && props.cmd6.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd6.help.name, props.cmd6);
+        props.cmd6.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd6)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd7 && !props.cmd7.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd7 && props.cmd7.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd7.help.name, props.cmd7);
+        props.cmd7.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd7)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd8 && !props.cmd8.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd8 && props.cmd8.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd8.help.name, props.cmd8);
+        props.cmd8.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd8)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd9 && !props.cmd9.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd9 && props.cmd9.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd9.help.name, props.cmd9);
+        props.cmd9.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd9)
+        })
+        }
+        catch{return}
+        try{
+        if (props.cmd10 && !props.cmd10.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        if (!props.cmd10 && props.cmd10.help.name) return console.log('\x1b[31m[ERROR] Recieved an error loading commands in the module: ' + f + ' Please contact UDB support.')
+        client.commands.set(props.cmd10.help.name, props.cmd10);
+        props.cmd10.help.aliases.forEach(function(a) {
+          client.commands.set(a, props.cmd10)
+        })
+        }
+        catch{return}
      }});
     console.log(`Succesfully Started!`)
   }
