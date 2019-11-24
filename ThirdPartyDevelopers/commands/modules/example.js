@@ -4,7 +4,7 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd1.help = {
-    name: "example1"
+    name: "example1",
     aliases: ['ex1']
   };
   
@@ -14,7 +14,7 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd2.help = {
-    name: "example2"
+    name: "example2",
     aliases: ['ex2']
   };
   
@@ -24,7 +24,7 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd3.help = {
-    name: "example3"
+    name: "example3",
     aliases: ['ex3']
   };
   
@@ -34,7 +34,7 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd4.help = {
-    name: "example4"
+    name: "example4",
     aliases: ['ex4']
   };
   
@@ -44,7 +44,7 @@ exports.cmd1 = async (client, message, args) => {
   };
     
   exports.cmd5.help = {
-    name: "example5"
+    name: "example5",
     aliases: ['ex5']
   };
   
@@ -54,7 +54,7 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd6.help = {
-    name: "example6"
+    name: "example6",
     aliases: ['ex6']
   };
   
@@ -64,7 +64,7 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd7.help = {
-    name: "example7"
+    name: "example7",
     aliases: ['ex7']
   };
   
@@ -74,7 +74,7 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd8.help = {
-    name: "example8"
+    name: "example8",
     aliases: ['ex8']
   };
   
@@ -84,7 +84,7 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd9.help = {
-    name: "example9"
+    name: "example9",
     aliases: ['ex9']
   };
   
@@ -94,6 +94,6 @@ exports.cmd1 = async (client, message, args) => {
   };
   
   exports.cmd10.help = {
-    name: "example10"
+    name: "example10",
     aliases: ['ex10']
   };
