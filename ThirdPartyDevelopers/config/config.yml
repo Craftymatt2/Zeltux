@@ -1,0 +1,305 @@
+
+#
+#   -------------------------------------------------
+#   Zeltux Third Party Developers
+#   -------------------------------------------------
+#   Created By Matt
+#   In collaboration with Azono & amaan1028
+#
+#   Version 1.2
+#   -------------------------------------------------
+#   In this version of our Third Party Developers
+#   Code, we have included a full config file so
+#   you can call any of these settings within
+#   your addon.
+#   -------------------------------------------------
+#
+
+##########################################
+#                                        #
+#               Setup                    #
+#                                        #
+##########################################
+
+setup:
+  
+  # When setting up your bot, enter the bots token and your server ID below
+  token: "token_id"
+  serverID: "server_id"
+
+  
+##########################################
+#                                        #
+#               Settings                 #
+#                                        #
+##########################################
+
+# Change the main settings of the bot.
+
+colour: "FF0062"
+prefix: "="
+
+# Change bot branding.
+
+serverName: "Zeltux TPD"
+botName: "Zeltux TPD"
+footer: "© Zeltux TPD | Owned by Matt | Developed by Matt, Azono & MCThunder"
+
+statusMessage: "=help"
+
+disabledCommands: []
+
+inviteSystem: "on"
+
+liveConsoleLog: "on"
+
+# Pick a channel for commands to be ran in
+# or use 'any' to be any channel
+commandChannel: "any"
+
+# Add ID's of users who will not be able to use
+# the bots commands. e.g. "227937678779294380"
+blackList: []
+
+
+##########################################
+#                                        #
+#               Features                 #
+#                                        #
+##########################################
+
+# Disable or enable core functions of the bot.
+
+core:
+  fun: "on"
+  moderation: "on"
+  tickets: "on"
+  utilities: "on"
+  giveaways: "on"
+  economy: "on"
+  levels: "on"
+  music: "on"
+
+
+##########################################
+#                                        #
+#               Welcome                  #
+#                                        #
+##########################################
+
+# Edit welcome and leave messages
+
+autoRoles: ["Member"]
+
+joinLeaveMessage: "on"
+joinLeaveChannel: "welcome"
+
+welcomeMsg: "We hope you enjoy your stay!"
+
+leaveMsg: "They will be missed."
+
+# Enable and use the verifiction system
+
+verificationSystem: "off"
+verificationRole: "Verified"
+verificationChannel: "verify"
+
+
+##########################################
+#                                        #
+#          Roles & Channels              #
+#                                        #
+##########################################
+
+# Change the bot's core roles
+
+mutedRole: "Muted"
+
+
+# Change the bot's core channels
+
+logChannel: "logs"
+suggestionChannel: "suggestions"
+reportChannel: "logs"
+bugChannel: "logs"
+
+
+##########################################
+#                                        #
+#               Tickets                  #
+#                                        #
+##########################################
+
+# Toggle & edit the ticket system
+
+ticketSystem: "on"
+ticketCategory: "tickets"
+ticketPanelEmoji: "🎟️"
+ticketPanelMsg: "Hey There! Need Support?"
+
+
+##########################################
+#                                        #
+#             Applications               #
+#                                        #
+##########################################
+
+# Set application questions
+
+applicationSystem: "off"
+applicationCategory: "tickets"
+applicationChannel: "logs"
+applicationPosition: "Moderator"
+applicationQuestions:  [
+  "Question 1",
+  "Question 2",
+  "Question 3",
+  "Question 4",
+  "Question 5",
+  "Question 6",
+  "Question 7",
+  "Question 8",
+  "Question 9",
+  "Question 10",
+  "Question 11"
+]
+
+
+##########################################
+#                                        #
+#               Giveaways                #
+#                                        #
+##########################################
+
+# Modify giveaway details
+
+# {winners} - The giveaway winner(s)
+# {duration} - Remaining time of the giveaway
+# {prize} - The giveaway prize
+
+giveaways:
+  botsCanWin: false
+  ignoreIfHasPermission: []
+  embedColor: "#FF0062"
+  embedColorEnd: "#FF0062"
+  reaction: "🎉"
+messages:
+  giveaway: "🎉🎉 **GIVEAWAY** 🎉🎉"
+  giveawayEnded: "🎉🎉 **GIVEAWAY ENDED** 🎉🎉"
+  timeRemaining: "Time remaining: **{duration}**!"
+  inviteToParticipate: "React with 🎉 to participate!"
+  winMessage: "Congratulations, {winners}! You won **{prize}**!"
+  embedFooter: "Zeltux Giveaways"
+  noWinner: "Giveaway cancelled, no valid participations."
+  winners: "winner(s)"
+  endedAt: "End at"
+  rerollMessage: "🎉 New winner(s) : {winners}! Congratulations!"
+
+
+##########################################
+#                                        #
+#               Economy                  #
+#                                        #
+##########################################
+
+# Change economy settings
+
+economy:
+  currency: "$"
+  workCooldown: 300000
+  
+  jobs: [
+    # Title, Min Pay, Max Pay
+    ["engineer", 0, 400],
+    ["constructor", 0, 400],
+    ["Cook", 0, 400],
+    ["technician", 0, 400],
+    ["police", 0, 400],
+    ["doctor", 0, 400]
+  ]
+
+
+##########################################
+#                                        #
+#                Levels                  #
+#                                        #
+##########################################
+
+# Enable and edit the leveling system
+
+levelSystem: "on"
+
+# Pick which channel to send level up
+# messages to, or use 'current' to be the
+# current channel
+levelChannel: "current"
+
+levelCoolDown: 30000
+levelMaxPoints: 15
+
+
+##########################################
+#                                        #
+#                Links                   #
+#                                        #
+##########################################
+
+# Edit your server social links
+
+social:
+  facebook: ""
+  twitter: ""
+  instagram: ""
+  youtube: ""
+  twitch: ""
+
+online:
+  website: ""
+  forums: ""
+  donate: ""
+
+
+##########################################
+#                                        #
+#               Filters                  #
+#                                        #
+##########################################
+
+# s - staff role
+# m - management role
+
+swearFilter: "on"
+swearWords: ["fuck","shit","piss","dick","fucker","cock","cunt","bitch","whore","arse",
+            "bastard","wanker","bullshit","nigger","slut","choad","chode"]
+
+inviteFilter: "off"
+
+
+##########################################
+#                                        #
+#                Images                  #
+#                                        #
+##########################################
+
+# Edit the GIFS that the bot displays.
+
+slap: ["https://media.giphy.com/media/TA9NZjiqCIOTC/giphy.gif",
+       "https://media0.giphy.com/media/9j6ZRLTLPxjpu/source.gif",
+       "https://giphy.com/gifs/hulu-mindy-kaling-the-project-lahiri-l3vRb8wtvRtW9mOk0",
+       "https://giphy.com/gifs/bojack-horseman-todd-chavez-face-slap-l2YOqzhYD066fAd56",
+       "https://giphy.com/gifs/lol-jimmy-fallon-reaction-gifs-Hz3YLyGYc15Oo",
+       "https://giphy.com/gifs/ratboys-l0Iy4KUJ0Q4prROOQ"]
+    
+hug: ["https://i.pinimg.com/originals/0a/16/52/0a1652de311806ce55820a7115993853.gif",
+      "https://media.tenor.com/images/42a6820297796b572c36aeb9d86ef684/tenor.gif",
+      "https://tenor.com/view/hugging-hug-gif-10592461",
+      "https://tenor.com/view/warm-hug-gif-10592083",
+      "https://tenor.com/view/wyatt-logan-timeless-matt-lanter-lucy-preston-abigail-spencer-gif-12254044",
+      "https://tenor.com/view/big-hero6-baymax-feel-better-hug-hugging-gif-4782499",
+      "https://tenor.com/view/hug-peachcat-cat-cute-gif-13985247",
+      "https://tenor.com/view/cuddle-party-finding-dory-disney-hug-gif-7278312",
+      "https://tenor.com/view/frozen-anna-elsa-hug-hugging-gif-4911454"]
+
+      
+
+# © Zeltux Discord Bot | Do Not Copy
