@@ -21,9 +21,10 @@ client.on("ready", () => {
 
 client.on("message", async message => {
   if (message.author.bot) return
-  const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g)
-  const command = args.shift().toLowerCase()
-  const cmd = client.commands.get(command)
+  if (message.content.indexOf(client.config.prefix) !== 0) return
+  var args = message.content.slice(client.config.prefix.length).trim().split(/ +/g)
+  var command = args.shift().toLowerCase()
+  var cmd = client.commands.get(command)
   if(cmd) client.command = command
   if(!cmd) { 
     client.commands.forEach(com => {
