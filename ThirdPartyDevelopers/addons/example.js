@@ -5,12 +5,14 @@ const Discord = require("discord.js")
 commands = [
     {
         name: 'test',
+        aliases: [''],
         run: async (client, message, args) => {
             message.channel.send('Test')
         }
     },
     {
         name: 'test1',
+        aliases: [''],
         run: async (client, message, args) => {
             message.channel.send('Test1')
         }
