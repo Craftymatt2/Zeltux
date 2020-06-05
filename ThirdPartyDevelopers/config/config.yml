@@ -4,9 +4,9 @@
 #   Zeltux Third Party Developers
 #   -------------------------------------------------
 #   Created By Matt
-#   In collaboration with Azono & amaan1028
+#   Developed by Matt & Azono 
 #
-#   Version 1.2
+#   Version 1.3
 #   -------------------------------------------------
 #   In this version of our Third Party Developers
 #   Code, we have included a full config file so
@@ -24,7 +24,7 @@
 setup:
   
   # When setting up your bot, enter the bots token and your server ID below
-  token: "token_id"
+  token: "bot_token"
   serverID: "server_id"
 
   
@@ -37,25 +37,26 @@ setup:
 # Change the main settings of the bot.
 
 colour: "FF0062"
-prefix: "="
+prefix: "-"
 
 # Change bot branding.
 
-serverName: "Zeltux TPD"
-botName: "Zeltux TPD"
-footer: "© Zeltux TPD | Owned by Matt | Developed by Matt, Azono & MCThunder"
+serverName: "Zeltux"
+botName: "Zeltux"
+footer: "© Zeltux | Owned by Matt | Developed by Matt & Azono"
 
-statusMessage: "=help"
-
-disabledCommands: []
+statusMessage: "-help"
 
 inviteSystem: "on"
 
 liveConsoleLog: "on"
 
 # Pick a channel for commands to be ran in
-# or use 'any' to be any channel
-commandChannel: "any"
+# leave blank for any channel
+commandChannels: []
+# Commands that ignore the command channel
+bypassCommands: ["gcreate", "gend", "gdelete", "greroll", "add", "remove", "lower", "raise", "close", "reopen",
+                 "delete", "forcedelete", "ticketpanel", "transcript", "voiceticket", "clear", "slowmode", "lockdown", "announce"]
 
 # Add ID's of users who will not be able to use
 # the bots commands. e.g. "227937678779294380"
@@ -101,9 +102,9 @@ leaveMsg: "They will be missed."
 # Enable and use the verifiction system
 
 verificationSystem: "off"
-verificationRole: "Verified"
+verificationRole: "test"
 verificationChannel: "verify"
-
+verifyPanelEmoji: "✅"
 
 ##########################################
 #                                        #
@@ -115,11 +116,20 @@ verificationChannel: "verify"
 
 mutedRole: "Muted"
 
+# Add roles of people who can do the following:
+
+viewVerifyChannel:   ["Management"]
+talkInVerifyChannel: ["Management"]
+
+viewLogsChannel:  ["Management"]
+
+exemptFromPunishments:   ["Staff", "Management"]
+
 
 # Change the bot's core channels
 
 logChannel: "logs"
-suggestionChannel: "suggestions"
+suggestionChannel: "logs"
 reportChannel: "logs"
 bugChannel: "logs"
 
@@ -136,6 +146,13 @@ ticketSystem: "on"
 ticketCategory: "tickets"
 ticketPanelEmoji: "🎟️"
 ticketPanelMsg: "Hey There! Need Support?"
+maxTicketsPerUser: 1
+
+# Add roles of people who can do the following:
+
+canSeeTicket:        ["Staff", "Management"]
+canSeeRaisedTicket:  ["Management"]
+canSeeClosedTicket:  ["Management"]
 
 
 ##########################################
@@ -151,18 +168,12 @@ applicationCategory: "tickets"
 applicationChannel: "logs"
 applicationPosition: "Moderator"
 applicationQuestions:  [
-  "Question 1",
-  "Question 2",
-  "Question 3",
-  "Question 4",
-  "Question 5",
-  "Question 6",
-  "Question 7",
-  "Question 8",
-  "Question 9",
-  "Question 10",
-  "Question 11"
+  "Question 1?",
+  "Question 2?",
+  "Question 3?"
 ]
+
+canSeeApplication: ["Management"]
 
 
 ##########################################
@@ -180,21 +191,7 @@ applicationQuestions:  [
 giveaways:
   botsCanWin: false
   ignoreIfHasPermission: []
-  embedColor: "#FF0062"
-  embedColorEnd: "#FF0062"
   reaction: "🎉"
-messages:
-  giveaway: "🎉🎉 **GIVEAWAY** 🎉🎉"
-  giveawayEnded: "🎉🎉 **GIVEAWAY ENDED** 🎉🎉"
-  timeRemaining: "Time remaining: **{duration}**!"
-  inviteToParticipate: "React with 🎉 to participate!"
-  winMessage: "Congratulations, {winners}! You won **{prize}**!"
-  embedFooter: "Zeltux Giveaways"
-  noWinner: "Giveaway cancelled, no valid participations."
-  winners: "winner(s)"
-  endedAt: "End at"
-  rerollMessage: "🎉 New winner(s) : {winners}! Congratulations!"
-
 
 ##########################################
 #                                        #
@@ -212,10 +209,17 @@ economy:
     # Title, Min Pay, Max Pay
     ["engineer", 0, 400],
     ["constructor", 0, 400],
-    ["Cook", 0, 400],
+    ["cook", 0, 400],
     ["technician", 0, 400],
     ["police", 0, 400],
     ["doctor", 0, 400]
+  ]
+
+  roleShop: [
+    # Role, Cost
+    ["Bronze", 4000],
+    ["Silver", 5500],
+    ["Gold", 7000]
   ]
 
 
@@ -265,14 +269,21 @@ online:
 #                                        #
 ##########################################
 
-# s - staff role
-# m - management role
-
 swearFilter: "on"
 swearWords: ["fuck","shit","piss","dick","fucker","cock","cunt","bitch","whore","arse",
             "bastard","wanker","bullshit","nigger","slut","choad","chode"]
 
 inviteFilter: "off"
+
+antiSpam: "on"
+antispamMessageLimit: 5
+antispamTimeLimit: 100000
+antiSpamMuteTime: 30000
+
+# Add roles of people who can do the following:
+
+swearBypass:   ["Management"]
+inviteBypass:  ["Management"]
 
 
 ##########################################
@@ -300,6 +311,5 @@ hug: ["https://i.pinimg.com/originals/0a/16/52/0a1652de311806ce55820a7115993853.
       "https://tenor.com/view/cuddle-party-finding-dory-disney-hug-gif-7278312",
       "https://tenor.com/view/frozen-anna-elsa-hug-hugging-gif-4911454"]
 
-      
 
 # © Zeltux Discord Bot | Do Not Copy
