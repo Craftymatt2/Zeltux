@@ -3,9 +3,9 @@
 // Third Party Developers Copy
 
 // Created By Matt
-// In collaboration with Azono & amaan1028
+// Developed by Matt & Azono 
 
-// For Zeltux Version 1.2
+// For Zeltux Version 1.3
 
 const Discord = require("discord.js")
 const client = new Discord.Client()
@@ -24,9 +24,20 @@ client.on("message", async message => {
   const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g)
   const command = args.shift().toLowerCase()
   const cmd = client.commands.get(command)
+  if(cmd) client.command = command
+  if(!cmd) { 
+    client.commands.forEach(com => {
+      if(com.name != undefined){
+        if(com.aliases.includes(command)){
+          cmd = client.commands.get(com.name)
+          client.command = com.name}}})}
   if(!cmd) return
-  try {cmd.run(client, message, args);return}
-  catch{cmd(client, message, args)}
+  client.sentCommand = command
+  client.commandDetails = cmd
+  if(client.config.commandChannels.length > 0) {
+    if(!client.commandChannels.includes(`${message.channel.id}`)){
+      if(!client.config.bypassCommands.includes(client.command)) return} }
+  cmd.run(client, message, args)
 })
 
 client.commands = new Discord.Collection();
@@ -36,14 +47,15 @@ fs.readdir(`./addons/`, (err, files) => {
   files.forEach((f, i) =>{
     let props = require(`./addons/${f}`)
     if(f.split(".").pop() === "js"){
-      console.log(`Loaded addon ${f}`)
+      console.log(`Loaded addon ${f}.`)
       props.commands.forEach(function(p){
-        client.commands.set(p.name, p.run)
+        p.type = "addon"
+        client.commands.set(p.name, p)
       })
       props.events.forEach(function(p){
         client.on(p.name, p.run.bind(null, client))
       })
-   }
+    }
   })
 })
 
